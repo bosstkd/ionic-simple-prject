@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Location Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+   <ion-item>
+    <ion-label>Title: <strong>{{location.title}}</strong></ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>City: <strong>{{location.city}}</strong></ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Country: <strong>{{location.country}}</strong></ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Keywords: <strong>{{location.keyWords}}</strong></ion-label>
+  </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-content>
+      <!--
+      <agm-map [latitude]="location.coordinates.latitude" [longitude]="location.coordinates.longitude">
+        <agm-marker [latitude]="location.coordinates.latitude" [longitude]="location.coordinates.latitude"></agm-marker>
+      </agm-map>
+      -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>
