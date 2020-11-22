@@ -15,9 +15,8 @@ menus=[
   {titre:'Gallery', url:'/menu/gallery', icon:'school'},
   {titre:'Locations', url:'/menu/locations', icon:'sync'},
   {titre:'developers', url:'/menu/developers', icon:'code-working-outline'},
-  {titre:'developer', url:'/menu/developer', icon:'code-outline'},
-  {titre:'Logout', url:'/login', icon:'log-out'}
-
+  {titre:'Logout', url:'/login', icon:'log-out'},
+  {titre:'Exit', url:'/login', icon:'power'}
 ]
 
   constructor( private router:Router, private auth:AuthenticationService) { }
@@ -28,8 +27,12 @@ menus=[
   onMenuAction(m){
     if(m.titre === 'Logout'){
       this.auth.logout();
-    }
+    }else if(m.titre === 'Exit'){
+      this.auth.logout();
+      navigator['app'].exitApp();
+    }else{
       this.router.navigateByUrl(m.url);
+    }
   }
 
 }

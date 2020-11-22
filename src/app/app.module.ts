@@ -16,6 +16,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
             driverOrder: ['indexeddb', 'sqlite', 'websql']}),
           ],
   providers: [
+    Camera,
     SQLite,
     SQLitePorter,
     Geolocation,

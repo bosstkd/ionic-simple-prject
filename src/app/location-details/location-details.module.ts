@@ -18,7 +18,7 @@ import { LocationDetailsPage } from './location-details.page';
     LocationDetailsPageRoutingModule,
     /*
     AgmCoreModule.forRoot({
-      apiKey: 'Your key'
+      apiKey: 'AIzaSyBsmHpb3usZaB1Agh3-3ArrK2yTMwTxT58'
     })
     */
   ],

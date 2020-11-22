@@ -29,4 +29,15 @@ export class LocationService {
 
   public currentLocation:Place;
 
+
+  public addImage(image:string, timestamp:number){
+    for(let i = 0; i < this.locations.length; i++){
+      if(this.locations[i].timestamp === timestamp){
+        this.locations[i].photos.push(image);
+        this.storage.set('locations', this.locations);
+        break;
+      }
+    }
+  }
+
 }

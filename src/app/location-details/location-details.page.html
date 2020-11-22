@@ -3,6 +3,11 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onTakePicture()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Location Details</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -22,13 +27,18 @@
     <ion-label>Keywords: <strong>{{location.keyWords}}</strong></ion-label>
   </ion-item>
   </ion-list>
+  <!-- 
   <ion-card>
-    <ion-card-content>
-      <!--
+     <ion-card-content>
       <agm-map [latitude]="location.coordinates.latitude" [longitude]="location.coordinates.longitude">
         <agm-marker [latitude]="location.coordinates.latitude" [longitude]="location.coordinates.latitude"></agm-marker>
       </agm-map>
-      -->
     </ion-card-content>
   </ion-card>
+-->
+<ion-card *ngFor="let item of location.photos">
+    <ion-card-content>
+      <ion-img [src]="item"></ion-img>
+    </ion-card-content>
+</ion-card>
 </ion-content>
